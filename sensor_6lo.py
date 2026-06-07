@@ -24,7 +24,7 @@ import logging
 
 # -- Configuration -------------------------------------------------------------
 # Gateway link-local IPv6 address on bt0 (run `ip addr show bt0` on gateway PC)
-GATEWAY_ADDR    = "fe80::xxxx:xxxx:xxxx:xxxx"   # <-- FILL IN
+GATEWAY_ADDR    = "fe80::f0a6:54ff:febc:5400"   # <-- FILL IN
 GATEWAY_PORT    = 5683          # CoAP-style port (UDP, no CoAP lib needed)
 BT_INTERFACE    = "bt0"         # 6LoWPAN network interface on this machine
 SEND_INTERVAL   = 5.0           # seconds between readings
