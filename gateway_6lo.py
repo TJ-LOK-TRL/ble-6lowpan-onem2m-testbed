@@ -70,7 +70,7 @@ def ensure_ae_and_acp():
         headers=cse_headers(1),
         json={"m2m:acp": {
             "rn": ACP_NAME,
-            "pv": {"acr": [{"acor": [ORIGINATOR, "CDashboard", "CMetrics", "CAdmin"],
+            "pv": {"acr": [{"acor": [ORIGINATOR, "CDashboard", "CMetrics", "CAdmin", "CMetrics6Lo"],
                             "acop": 63}]},
             "pvs": {"acr": [{"acor": ["CAdmin"], "acop": 63}]}
         }})
