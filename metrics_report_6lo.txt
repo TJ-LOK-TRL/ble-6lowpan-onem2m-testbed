@@ -1,0 +1,114 @@
+
+=============================================================
+  oneM2M 6LoWPAN (BLE) - PERFORMANCE METRICS REPORT
+=============================================================
+
+COLLECTION
+  Transport:      BLE/6LoWPAN (UDP over bt0)
+  Duration:       300.0 s
+  Total msgs:     57
+  Rate:           11.4 msg/min
+  Devices:        {'OneM2M-Sensor-6Lo': 57}
+  Containers:     ['sensor-onem2msensor6lo']
+  Note: ACME clock skew correction applied (+3600000ms)
+
+LATENCY  (ms)
+  [1] Sensor -> CSE  (sensor_ts_ms -> CIN ct, clock-skew corrected)
+      n=57  min=172.69  mean=1053.85  median=1045.76  max=4008.29  stdev=638.64
+
+  [2] CSE -> Collector  (CIN ct -> notification receipt)
+      n=57  min=-803.61  mean=-765.56  median=-760.52  max=-724.61  stdev=21.26
+
+  [3] Total End-to-End  (Sensor -> Collector, no clock correction needed)
+      n=57  min=-604.37  mean=288.29  median=279.01  max=3247.01  stdev=638.71
+
+INTER-ARRIVAL  (ms between consecutive msgs at collector)
+  n=56  min=2302.19  mean=5267.8  median=5250.92  max=8200.25  stdev=624.08
+
+BURST ANALYSIS
+  Burst msgs (< 1000 ms apart): 0 (0.0%)
+
+PAYLOAD SIZE  (bytes)
+  Raw JSON:   n=57  min=186  mean=187.51  max=188
+  CIN total:  n=57  min=561  mean=562.51  max=563
+  Overhead:   mean=66.67%  max=66.84%
+
+=============================================================
+
+
+RAW JSON:
+{
+  "transport": "BLE/6LoWPAN",
+  "collection": {
+    "duration_s": 300.0,
+    "total_messages": 57,
+    "message_rate_per_min": 11.4,
+    "containers": [
+      "sensor-onem2msensor6lo"
+    ],
+    "devices": {
+      "OneM2M-Sensor-6Lo": 57
+    }
+  },
+  "cse_latency_ms": {
+    "n": 57,
+    "min": 172.69,
+    "max": 4008.29,
+    "mean": 1053.85,
+    "median": 1045.76,
+    "stdev": 638.64
+  },
+  "notify_latency_ms": {
+    "n": 57,
+    "min": -803.61,
+    "max": -724.61,
+    "mean": -765.56,
+    "median": -760.52,
+    "stdev": 21.26
+  },
+  "total_latency_ms": {
+    "n": 57,
+    "min": -604.37,
+    "max": 3247.01,
+    "mean": 288.29,
+    "median": 279.01,
+    "stdev": 638.71
+  },
+  "inter_arrival_ms": {
+    "n": 56,
+    "min": 2302.19,
+    "max": 8200.25,
+    "mean": 5267.8,
+    "median": 5250.92,
+    "stdev": 624.08
+  },
+  "burst_analysis": {
+    "burst_messages": 0,
+    "burst_pct": 0.0,
+    "threshold_ms": 1000
+  },
+  "payload_bytes": {
+    "n": 57,
+    "min": 186,
+    "max": 188,
+    "mean": 187.51,
+    "median": 188,
+    "stdev": 0.6
+  },
+  "cin_bytes": {
+    "n": 57,
+    "min": 561,
+    "max": 563,
+    "mean": 562.51,
+    "median": 563,
+    "stdev": 0.6
+  },
+  "overhead_pct": {
+    "n": 57,
+    "min": 66.61,
+    "max": 66.84,
+    "mean": 66.67,
+    "median": 66.61,
+    "stdev": 0.07
+  }
+}
